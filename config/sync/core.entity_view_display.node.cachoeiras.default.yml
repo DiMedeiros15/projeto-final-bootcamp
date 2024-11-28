@@ -33,8 +33,8 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:cachoeiras:field_image'
-              label: 'Imagem da cachoeira'
-              label_display: '0'
+              label: Cachoeiras
+              label_display: visible
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity

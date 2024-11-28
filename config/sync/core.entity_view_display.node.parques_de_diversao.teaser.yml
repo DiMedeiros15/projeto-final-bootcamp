@@ -31,9 +31,12 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:node:parques_de_diversao:field_image'
-              label_display: '0'
+              label: '#Parque de diversão'
+              label_display: visible
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: image
                 label: hidden

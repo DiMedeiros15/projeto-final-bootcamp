@@ -695,6 +695,7 @@ display:
       menu:
         type: normal
         title: 'Listagem dos parques'
+        weight: -47
         menu_name: main
         parent: ''
     cache_metadata:
