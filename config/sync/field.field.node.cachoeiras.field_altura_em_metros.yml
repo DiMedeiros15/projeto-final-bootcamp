@@ -1,0 +1,23 @@
+uuid: 44c4135b-c9e8-4f1f-b19d-34e8f6d18d64
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_altura_em_metros
+    - node.type.cachoeiras
+id: node.cachoeiras.field_altura_em_metros
+field_name: field_altura_em_metros
+entity_type: node
+bundle: cachoeiras
+label: Altura
+description: 'Altura (em metros)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: m
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: 85fe6fdc-d41b-4c9b-9d07-9d730275508b
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_localizacao_dos_parques
+field_name: field_localizacao_dos_parques
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

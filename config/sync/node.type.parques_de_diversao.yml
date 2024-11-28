@@ -1,0 +1,17 @@
+uuid: 725726cb-1193-48a2-8e27-af25ab37f700
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Parques de diversão'
+type: parques_de_diversao
+description: 'Aqui vejamos um pouco sobre o parque de diversão'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

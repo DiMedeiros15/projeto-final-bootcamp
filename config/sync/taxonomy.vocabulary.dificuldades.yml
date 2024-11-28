@@ -1,0 +1,9 @@
+uuid: 170c98a3-43fa-443c-b3ee-d62d660a09b0
+langcode: pt-br
+status: true
+dependencies: {  }
+name: Dificuldades
+vid: dificuldades
+description: 'Detalha a dificuldade '
+weight: 0
+new_revision: false

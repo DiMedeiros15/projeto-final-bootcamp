@@ -1,0 +1,11 @@
+uuid: db517cae-5985-4f64-8852-56bdbc1477ec
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - file
+id: file.token
+label: Token
+description: null
+targetEntityType: file
+cache: true

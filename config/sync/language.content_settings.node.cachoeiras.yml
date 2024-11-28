@@ -1,0 +1,11 @@
+uuid: 2cedd3f4-989c-43d5-a9fc-c8a846d3dadb
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.cachoeiras
+id: node.cachoeiras
+target_entity_type_id: node
+target_bundle: cachoeiras
+default_langcode: site_default
+language_alterable: false

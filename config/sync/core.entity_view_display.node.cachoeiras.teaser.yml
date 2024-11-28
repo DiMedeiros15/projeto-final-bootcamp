@@ -1,0 +1,143 @@
+uuid: 9bdf8c26-34ca-4d0e-93df-c395465a0d01
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.cachoeiras.body
+    - field.field.node.cachoeiras.field_altura_em_metros
+    - field.field.node.cachoeiras.field_dificuldade
+    - field.field.node.cachoeiras.field_image
+    - field.field.node.cachoeiras.field_localizacao
+    - field.field.node.cachoeiras.field_site_oficial
+    - image.style.medium
+    - node.type.cachoeiras
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          96ee0009-ac98-4e5d-930b-95530b3b3f36:
+            uuid: 96ee0009-ac98-4e5d-930b-95530b3b3f36
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeiras:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: medium
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          c2114fb9-2f7c-4f9a-be7a-f156a3f68d50:
+            uuid: c2114fb9-2f7c-4f9a-be7a-f156a3f68d50
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeiras:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          14b4dbbd-c27d-4581-96cd-6a1b25b820ef:
+            uuid: 14b4dbbd-c27d-4581-96cd-6a1b25b820ef
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeiras:field_localizacao'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          229443e2-e8c8-4917-96ea-d88733ca8a07:
+            uuid: 229443e2-e8c8-4917-96ea-d88733ca8a07
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeiras:field_dificuldade'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+id: node.cachoeiras.teaser
+targetEntityType: node
+bundle: cachoeiras
+mode: teaser
+content:
+  body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_dificuldade:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_localizacao:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_altura_em_metros: true
+  field_site_oficial: true
+  langcode: true
+  links: true

@@ -1,0 +1,29 @@
+uuid: 0d1e36f5-0d13-4b30-90a2-1da436f42032
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dificuldade
+    - node.type.cachoeiras
+    - taxonomy.vocabulary.dificuldades
+id: node.cachoeiras.field_dificuldade
+field_name: field_dificuldade
+entity_type: node
+bundle: cachoeiras
+label: Dificuldade
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      dificuldades: dificuldades
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

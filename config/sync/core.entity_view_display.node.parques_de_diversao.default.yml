@@ -1,0 +1,160 @@
+uuid: 7f000015-f0fd-4a5c-8859-2cb667f3298f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.parques_de_diversao.body
+    - field.field.node.parques_de_diversao.field_image
+    - field.field.node.parques_de_diversao.field_localizacao_dos_parques
+    - field.field.node.parques_de_diversao.field_site_oficial
+    - image.style.medium
+    - node.type.parques_de_diversao
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          62414cd1-d035-458c-b17b-47fc58ac3834:
+            uuid: 62414cd1-d035-458c-b17b-47fc58ac3834
+            region: content
+            configuration:
+              id: 'field_block:node:parques_de_diversao:field_image'
+              label: 'Imagem dos parques'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          2524df8c-7a18-4be8-b59d-4c20a2ac62ba:
+            uuid: 2524df8c-7a18-4be8-b59d-4c20a2ac62ba
+            region: content
+            configuration:
+              id: 'field_block:node:parques_de_diversao:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 300
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Duas colunas '
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          51e68085-4b65-43e2-aa79-6fca3e0e6e96:
+            uuid: 51e68085-4b65-43e2-aa79-6fca3e0e6e96
+            region: second
+            configuration:
+              id: 'field_block:node:parques_de_diversao:field_site_oficial'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: inline
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9232c57f-fa66-4422-b408-e8cfcd4c1911:
+            uuid: 9232c57f-fa66-4422-b408-e8cfcd4c1911
+            region: first
+            configuration:
+              id: 'field_block:node:parques_de_diversao:field_localizacao_dos_parques'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.parques_de_diversao.default
+targetEntityType: node
+bundle: parques_de_diversao
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_localizacao_dos_parques:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_site_oficial:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  links: true

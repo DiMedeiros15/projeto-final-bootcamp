@@ -1,0 +1,212 @@
+uuid: dd7d619f-7117-46aa-816c-7e3d24435539
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.cachoeiras.body
+    - field.field.node.cachoeiras.field_altura_em_metros
+    - field.field.node.cachoeiras.field_dificuldade
+    - field.field.node.cachoeiras.field_image
+    - field.field.node.cachoeiras.field_localizacao
+    - field.field.node.cachoeiras.field_site_oficial
+    - image.style.wide
+    - node.type.cachoeiras
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          6e08e698-5e3f-4cc2-a1f6-e32919e9ca66:
+            uuid: 6e08e698-5e3f-4cc2-a1f6-e32919e9ca66
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeiras:field_image'
+              label: 'Imagem da cachoeira'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: large
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          c92c443b-d406-44ed-87b3-d8ce5e15ad74:
+            uuid: c92c443b-d406-44ed-87b3-d8ce5e15ad74
+            region: content
+            configuration:
+              id: 'field_block:node:cachoeiras:body'
+              label: 'Descrição da cachoeira'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: inline
+                settings:
+                  trim_length: 300
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: '3 colunas '
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          50e6ae78-dcc0-4eea-a539-f49118d20947:
+            uuid: 50e6ae78-dcc0-4eea-a539-f49118d20947
+            region: second
+            configuration:
+              id: 'field_block:node:cachoeiras:field_altura_em_metros'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: inline
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          1a6bdcd1-d100-4cd7-946b-f479e32f2169:
+            uuid: 1a6bdcd1-d100-4cd7-946b-f479e32f2169
+            region: first
+            configuration:
+              id: 'field_block:node:cachoeiras:field_localizacao'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          de284064-06bc-43c1-81d5-35a41c856d69:
+            uuid: de284064-06bc-43c1-81d5-35a41c856d69
+            region: first
+            configuration:
+              id: 'field_block:node:cachoeiras:field_dificuldade'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          9c82c4c9-149b-469b-8a0f-9c14b65b84d7:
+            uuid: 9c82c4c9-149b-469b-8a0f-9c14b65b84d7
+            region: second
+            configuration:
+              id: 'field_block:node:cachoeiras:field_site_oficial'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: inline
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.cachoeiras.default
+targetEntityType: node
+bundle: cachoeiras
+mode: default
+content:
+  body:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_altura_em_metros:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_dificuldade:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_localizacao:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_site_oficial:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  links: true

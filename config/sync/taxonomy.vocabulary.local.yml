@@ -1,0 +1,9 @@
+uuid: 2ecd701a-93c1-4843-bca9-0bd574153adc
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Localização dos parques'
+vid: local
+description: 'Local dos parques'
+weight: 0
+new_revision: false

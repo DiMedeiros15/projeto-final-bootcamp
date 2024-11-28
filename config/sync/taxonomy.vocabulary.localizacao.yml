@@ -1,0 +1,9 @@
+uuid: c83c9d60-89c0-4122-b2b2-5b3502a1fac5
+langcode: pt-br
+status: true
+dependencies: {  }
+name: Localizações
+vid: localizacao
+description: 'Locais para turistas'
+weight: 0
+new_revision: false

@@ -1,0 +1,32 @@
+uuid: dd46a644-6eb9-45ea-90fb-3bfb64b2a44b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.listagem_dos_parques
+  module:
+    - node
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__listagem_dos_parques_block
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:listagem_dos_parques-block_1'
+settings:
+  id: 'views_block:listagem_dos_parques-block_1'
+  label: '3 últimos parques cadastrados'
+  label_display: visible
+  provider: views
+  views_label: '3 últimos parques cadastrados'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      parques_de_diversao: parques_de_diversao
